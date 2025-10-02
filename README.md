@@ -4,6 +4,7 @@ An intelligent AI-powered agent that helps small businesses identify marketing w
 
 ## 🎯 Features
 
+- **Interactive Web UI**: User-friendly Streamlit interface for easy data input and result visualization
 - **Business Marketing Analysis**: Comprehensive evaluation of marketing practices across multiple dimensions
 - **Scorecard Generation**: Detailed scoring system that rates current marketing effectiveness
 - **Solution Engine**: Generates prioritized, actionable recommendations with cost and timeline estimates
@@ -32,7 +33,22 @@ cp .env.example .env
 # Edit .env and add your OPENAI_API_KEY
 ```
 
-### Basic Usage
+### Interactive UI (Streamlit)
+
+Launch the interactive web interface:
+
+```bash
+streamlit run app.py
+```
+
+This will open a browser window with an intuitive form where you can:
+- Enter your business information
+- Specify social media presence
+- Select marketing channels
+- Add competitor information
+- View comprehensive analysis results with visualizations
+
+### Command Line Usage
 
 ```python
 from src.marketing_agent import MarketingAgent
@@ -138,6 +154,7 @@ marketing-ai-agent/
 ├── examples/
 │   ├── basic_usage.py          # Basic usage examples
 │   └── with_ai_insights.py     # AI-powered examples
+├── app.py                      # Streamlit web UI
 ├── requirements.txt            # Python dependencies
 ├── .env.example               # Environment variables template
 └── README.md                  # This file
@@ -246,6 +263,18 @@ print(formatted_text)
 
 ## 🧪 Testing
 
+### Interactive UI Testing
+
+Launch the Streamlit web interface:
+
+```bash
+streamlit run app.py
+```
+
+Then fill in the form with your business details and click "Analyze My Business" to see the results.
+
+### Command Line Testing
+
 Run the example scripts to test functionality:
 
 ```bash
@@ -297,7 +326,7 @@ For questions, issues, or feature requests, please open an issue on GitHub.
 - [ ] Web scraping for competitor analysis
 - [ ] Website analysis with Lighthouse
 - [ ] PDF report generation
-- [ ] Dashboard UI
+- [x] Dashboard UI (Streamlit)
 - [ ] Database for tracking improvements over time
 - [ ] Email reporting capabilities
 - [ ] Multi-business batch analysis
@@ -305,6 +334,7 @@ For questions, issues, or feature requests, please open an issue on GitHub.
 ## 💪 Built With
 
 - **Python 3.8+**
+- **Streamlit**: Interactive web UI framework
 - **LangChain**: LLM orchestration framework
 - **OpenAI GPT-3.5**: AI-powered insights
 - **Pydantic**: Data validation
