@@ -4,11 +4,13 @@ An intelligent AI-powered agent that helps small businesses identify marketing w
 
 ## 🎯 Features
 
+- **Web Interface**: User-friendly Streamlit app for browser-based analysis (no coding required!)
 - **Business Marketing Analysis**: Comprehensive evaluation of marketing practices across multiple dimensions
 - **Scorecard Generation**: Detailed scoring system that rates current marketing effectiveness
 - **Solution Engine**: Generates prioritized, actionable recommendations with cost and timeline estimates
 - **AI-Powered Insights**: Uses LangChain and OpenAI to provide intelligent, context-aware recommendations
 - **Revenue Impact Assessment**: Quantifies potential revenue improvements
+- **Export Capabilities**: Download reports in text or JSON format
 - **Real-time Data Integration**: Built to integrate with APIs for live business data
 
 ## 🚀 Quick Start
@@ -26,13 +28,34 @@ cd marketing-ai-agent
 pip install -r requirements.txt
 ```
 
-3. Set up environment variables:
+3. Set up environment variables (optional for AI features):
 ```bash
 cp .env.example .env
 # Edit .env and add your OPENAI_API_KEY
 ```
 
-### Basic Usage
+### 🌐 Web Interface (Recommended)
+
+**Launch the Streamlit app for an easy-to-use web interface:**
+
+```bash
+streamlit run streamlit_app.py
+```
+
+This will open a web browser where you can:
+- Fill out a simple form with your business information
+- Click submit to run the analysis
+- View results including scorecard, recommendations, and AI insights
+- Download reports in text or JSON format
+- **No coding required!**
+
+The web interface is perfect for:
+- Non-technical users
+- Quick business assessments
+- Interactive exploration of results
+- Sharing analysis with team members
+
+### Basic Usage (Python Code)
 
 ```python
 from src.marketing_agent import MarketingAgent
@@ -128,6 +151,7 @@ With an OpenAI API key configured, the agent provides:
 
 ```
 marketing-ai-agent/
+├── streamlit_app.py            # 🌐 Web interface (START HERE!)
 ├── src/
 │   ├── __init__.py
 │   ├── marketing_agent.py      # Main orchestrator
